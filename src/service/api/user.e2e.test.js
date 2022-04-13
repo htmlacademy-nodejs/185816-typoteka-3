@@ -34,7 +34,7 @@ describe(`API returns create user valid data`, () => {
         firstName: `test`,
         lastName: `test`,
         email: `test@test.ru`,
-        password: `pswd`,
+        password: `password`,
         avatar: `default.jpg`,
       });
   });

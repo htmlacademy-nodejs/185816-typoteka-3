@@ -22,6 +22,7 @@
     "pino": "7.5.1",
     "pug": "3.0.2",
     "sequelize": "6.16.1",
+    "sequelize-cli": "6.4.1",
     "socket.io": "4.4.1",
     "urlencoded-parser": "1.0.0"
   },
@@ -43,7 +44,7 @@
     "frontend": "nodemon -r dotenv/config ./src/express/express.js",
     "filldb": "cross-env NODE_ENV=development node -r dotenv/config ./src/service/service.js --filldb 10",
     "dev": "concurrently --name \"API,FRONTEND\" --prefix-colors \"blue, green\"  \"npm run backend::debug\" \"npm run frontend\"",
-    "start": ""
+    "start": "concurrently --name \"API,FRONTEND\" --prefix-colors \"blue, green\"  \"npm run backend\" \"npm run frontend\""
   },
   "repository": {
     "type": "git",

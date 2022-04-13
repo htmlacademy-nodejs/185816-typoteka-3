@@ -4,7 +4,7 @@ const {Model} = require(`sequelize`);
 const Alias = require(`./alias`);
 const defineRole = require(`./role`);
 const defineUser = require(`./user`);
-const defineCategory = require(`./categiry`);
+const defineCategory = require(`./category`);
 const definePublication = require(`./publication`);
 const defineComment = require(`./comment`);
 

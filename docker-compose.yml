@@ -1,22 +1,23 @@
 version: '3'
 services:
-#  api:
-#    image: node:14
-#    working_dir: /var/www/app
-#    volumes:
-#      - ./:/var/www/app
-#   command: sh -c "npm install && npm run backend::debug"
-#    ports:
-#      - "3000:3000"
-#
-#  frontend:
-#    image: node:14
-#    working_dir: /var/www/app
-#    volumes:
-#      - ./:/var/www/app
-#    command: sh -c "npm install && npm run frontend"
-#    ports:
-#     - "8080:8080"
+  nginx:
+    build:
+      context: ./devops/nginx/
+      dockerfile: Dockerfile
+    ports:
+      - "80:80"
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /var/www/app
+    command: sh -c "npm run frontend"
+  api:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    working_dir: /var/www/app
+    command: sh -c "npm run backend"
   db:
     image: postgres:10-alpine
     restart: always

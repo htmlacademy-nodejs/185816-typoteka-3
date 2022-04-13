@@ -64,7 +64,7 @@ describe(`API create comment`, () => {
   });
 
 
-  test(`Return create status 201`, () => expect(response.statusCode).toBe(ResponseStatus.SUCCESS_CREATE));
+  test(`Return create status 201`, () => expect(response).toBe(ResponseStatus.SUCCESS_CREATE));
 });
 
 describe(`API create comment bad request`, () => {

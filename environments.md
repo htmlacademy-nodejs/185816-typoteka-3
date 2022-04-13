@@ -1,10 +1,23 @@
 ## PostgresSQL
 
-```yaml
-DB_HOST: 'hostname' 
-DB_USER: 'database user login'
-DB_NAME: 'database name'
-DB_PORT: 'database port'
+```dotenv
+#Databse app
+DB_HOST=db
+DB_PORT=5432
+DB_NAME=typoteka
+DB_USER=typoteka
+DB_PASSWORD=typoteka
+SESSION_SECRET=secret
+
+#api
+API_HOST=http://api:3000
+API_TIMEOUT_REQUEST=1000
+
+#Docker
+POSTGRES_USER=typoteka
+POSTGRES_DB=typoteka
+POSTGRES_PASSWORD=typoteka
+POSTGRES_PORTS=127.0.0.1:5436:5432
 ```
 
 npm i sequelize
